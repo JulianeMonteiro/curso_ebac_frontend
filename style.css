@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+}
+header {
+  background-color: #f6d6ca;
+  border-bottom: 12px solid #eec2b0;
+  border-top: 12px solid #eec2b0;
+  color: #fff;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+}
+
+header button {
+  background-color: #eec2b0;
+  border: #fff solid 1px;
+  color: #fff;
+  margin-left: 20px;
+}
+
+header button,
+form button {
+  border-radius: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #d5b6a9;
+  transition: ease-in-out 0.5s;
+}
+
+form {
+  background-color: #ced4ce;
+  padding: 24px 0;
+  text-align: center;
+  display: none;
+}
+
+form h2 {
+  margin-bottom: 14px;
+  color: #638672;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+}
+
+input {
+  border: 1px solid #638672;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+form button {
+  background-color: aliceblue;
+  border: 1px solid #638672;
+  color: #638672;
+  margin-left: 10px;
+}
+
+form button:hover {
+  background-color: #9cc6ae;
+  color: aliceblue;
+  transition: ease-in-out 0.5s;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+ul {
+  margin-top: 50px;
+  font-size: 22px;
+  color: #638672;
+  list-style: none;
+}
+
+li {
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+
+li:hover {
+  color: #1b3627;
+}
+
+.tarefaRealizada {
+  text-decoration: line-through;
+}
