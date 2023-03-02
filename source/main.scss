@@ -91,16 +91,19 @@ section {
 }
 
 @media screen and (max-width: variaveis.$tablet) {
-  header,
-  section {
+  header {
     .container {
       width: 80%;
     }
   }
   section {
-    .products {
-      grid-template-columns: repeat(2, 48.5%);
-      column-gap: 3%;
+    .container {
+      width: 80%;
+
+      .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+      }
     }
   }
 }
