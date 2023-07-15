@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (event) {
+  event.preventDefault();
+
   const nameElement = document.querySelector("#name");
   const usernameElement = document.querySelector("#username");
   const avatarElement = document.querySelector("#avatar");
@@ -7,9 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const followingElement = document.querySelector("#following");
   const linkElement = document.querySelector("#link");
 
+  // URL da API do GitHub para obter informações do usuário
+  // const url = `https://api.github.com/users/JulianeMonteiro`;
   fetch("https://api.github.com/users/JulianeMonteiro")
-    .then(function (res) {
-      return res.json();
+    // fetch(url)
+    .then(function (response) {
+      return response.json();
     })
     .then(function (json) {
       nameElement.innerText = json.name;
@@ -19,5 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
       followersElement.innerText = json.followers;
       repositories.innerText = json.public_repos;
       linkElement.href = json.html_url;
+    })
+
+    .catch(function (erro) {
+      alert(
+        "Ocorreu um erro ao buscar o endereço, tente novamente mais tarde."
+      );
+    })
+    .finally(function () {
+      console.log("finally");
     });
 });
